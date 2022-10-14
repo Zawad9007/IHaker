@@ -1,70 +1,58 @@
 <!doctype html>
 <html>
-
 <head>
-  <meta charset=UTF-8>
-  <meta name=viewport content="width=device-width, initial-scale=1.0">
-  <script src=https://cdn.tailwindcss.com></script>
-  <script src="index.js"></script>
-    <link rel="shortcut icon" href="data:image/png;base64,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" type="image/x-icon">
-  <title>A Heaven For Haker</title>
+<meta charset=UTF-8>
+<meta name=viewport content="width=device-width, initial-scale=1.0">
+<script src=https://cdn.tailwindcss.com></script>
+<script src=index.js></script>
+<title>A Heaven For Haker</title>
 </head>
-
 <body>
-  <header class="text-gray-600 body-font">
-    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-        <svg xmlns=http://www.w3.org/2000/svg fill=none stroke=currentColor stroke-linecap=round stroke-linejoin=round
-          stroke-width=2 class="w-10 h-10 text-white p-2 bg-purple-500 rounded-full" viewBox="0 0 24 24">
-          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-        </svg>
-        <span class="ml-3 text-xl">IhakeR</span>
-      </a>
-      <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-        <a href="" class="mr-5 hover:text-gray-900">Home</a>
-        <a href="Testimonials.html" class="mr-5 hover:text-gray-900">Testimonials</a>
-        <a href="about.html" class="mr-5 hover:text-gray-900">About</a>
-        <a href="contact.html" class="mr-5 hover:text-gray-900">Contact</a>
-      </nav>
-
-    </div>
-  </header>
-  <section class="text-gray-600 body-font">
-    <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-      <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-        <img class="object-cover object-center rounded" id=a alt=hero
-          src="photo.jpg">
-      </div>
-      <div
-        class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Lets Becomes a Coder
-        </h1>
-        <p class="mb-8 leading-relaxed">Become A coder in 1month and hit The Best Salary</p>
-        <div class="flex justify-center">
-          <button
-            class="inline-flex text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 rounded text-lg"><a
-              href="enrole.html" style="
-            text-decoration: none;">Enroll now</a>
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-  <footer class="text-gray-600 body-font">
-    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-      <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-        <svg xmlns=http://www.w3.org/2000/svg fill=none stroke=currentColor stroke-linecap=round stroke-linejoin=round
-          stroke-width=2 class="w-10 h-10 text-white p-2 bg-purple-500 rounded-full" viewBox="0 0 24 24">
-          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-        </svg>
-        <span class="ml-3 text-xl">IhakeR</span>
-      </a>
-      <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2022
-        Zawad --
-      </p>
-      </span>
-    </div>
-  </footer>
+<header class="text-gray-600 body-font">
+<div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+<a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+<svg xmlns=http://www.w3.org/2000/svg fill=none stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 class="w-10 h-10 text-white p-2 bg-purple-500 rounded-full" viewBox="0 0 24 24">
+<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+</svg>
+<span class="ml-3 text-xl">IhakeR</span>
+</a>
+<nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+<a href class="mr-5 hover:text-gray-900">Home</a>
+<a href=Testimonials.html class="mr-5 hover:text-gray-900">Testimonials</a>
+<a href=about.html class="mr-5 hover:text-gray-900">About</a>
+<a href=contact.html class="mr-5 hover:text-gray-900">Contact</a>
+</nav>
+</div>
+</header>
+<section class="text-gray-600 body-font">
+<div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+<div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+<img class="object-cover object-center rounded" id=a alt=hero src=photo.jpg>
+</div>
+<div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+<h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Lets Becomes a Coder
+</h1>
+<p class="mb-8 leading-relaxed">Become A coder in 1month and hit The Best Salary</p>
+<div class="flex justify-center">
+<button class="inline-flex text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 rounded text-lg"><a href=enrole.html style=text-decoration:none>Enroll now</a>
+</button>
+</div>
+</div>
+</div>
+</section>
+<footer class="text-gray-600 body-font">
+<div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+<a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+<svg xmlns=http://www.w3.org/2000/svg fill=none stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 class="w-10 h-10 text-white p-2 bg-purple-500 rounded-full" viewBox="0 0 24 24">
+<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+</svg>
+<span class="ml-3 text-xl">IhakeR</span>
+</a>
+<p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2022
+Zawad --
+</p>
+</span>
+</div>
+</footer>
 </body>
-
 </html>
